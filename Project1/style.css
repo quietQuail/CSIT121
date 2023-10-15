@@ -1,0 +1,76 @@
+/* Reset some default styles and set a background image for the body */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('background.png'); /* Add your background image file */
+    background-size: contain;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #333; /* Text color */
+}
+
+/* Style the header */
+header {
+    background-color: #333; /* Header background color */
+    color: #fff; /* Header text color */
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Style the main content section */
+section {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for content */
+}
+
+section h2 {
+    font-size: 20px;
+}
+
+section p {
+    font-size: 16px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+img {
+    display: block; /* Ensures the image behaves as a block element */
+    margin: 0 auto;  /* Center the image horizontally by setting left and right margins to 'auto' */
+    max-width: 50%;
+}
+
+#boarder {
+    background-color: #E8F5F5;
+    margin: auto;
+    width: 75%;
+    min-width: 700px;
+    max-width: 1024px;
+}
