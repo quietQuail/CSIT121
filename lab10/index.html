@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML and JavaScript Lab</title>
+    <style>
+        body {
+            background: rgb(210,210,210);
+            background: linear-gradient(90deg, rgba(210,210,210,1) 0%, rgba(253,29,29,1) 51%, rgba(194,194,194,1) 100%);
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            font-family: "Courier New", monospace;
+        }
+
+        .container {
+        background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(45,253,128,0.9136029411764706) 100%);
+        }
+
+        .main-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f8f8f8;
+        border-left: 1px solid #ddd; 
+        border-right: 1px solid #ddd;
+        }
+
+        #content {
+            max-width: 800px;
+            margin: 0 auto;
+            border-left: 1px solid #ddd; 
+            border-right: 1px solid #ddd; 
+            padding-left: 100px; 
+            padding-right: 100px; 
+        }
+
+        .tabs {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #ddd;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .tab:hover {
+            background-color: #ccc;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class = "main-container">
+
+        <h1>Deep Dive into XML and Javascript</h1>
+
+        <ul class="tabs">
+            <li class="tab" onclick="showTab('tab1')">What is XML?</li>
+            <li class="tab" onclick="showTab('tab2')">How is XML used?</li>
+            <li class="tab" onclick="showTab('tab3')">What does XML look like? (Example)</li>
+            <li class="tab" onclick="showTab('tab4')">What is JavaScript?</li>
+            <li class="tab" onclick="showTab('tab5')">How is JavaScript related to HTML and CSS?</li>
+            <li class="tab" onclick="showTab('tab6')">Common JavaScript Elements, Properties, Methods, and Functions (Example)</li>
+        </ul>
+
+        <div class="tab-content" id="tab1">
+            <h2>What is XML?</h2>
+            <p>XML, which stands for eXtensible Markup Language is a versatile format for structuring and storing data within a hierarchical manner with the intention to be readable and understandable by humans and computers, hence the generic text format. XML is a markup language, not a programming language.</p>
+            <p>XML allows users to create their own custom tags and website content, making it "extensible" and viable for various data structures.</p>
+        </div>
+
+        <div class="tab-content" id="tab2">
+            <h2>How is XML used?</h2>
+            <p>XML is used for describing data structures, the content within those structures, and the relationships within the structure. Its designed and used to transfer data from one system to another.</p>
+            <p>XML is very beneficial for companies as they can use it to keep track of information regarding sales, employees, orders, ect. all in one place.</p>
+        </div>
+
+        <div class="tab-content" id="tab3">
+            <h2>What does XML look like? (Example)</h2>
+            <pre><code>
+            &lt;EmployeeData&gt;
+                &lt;Employee ID='413'&gt;
+                    &lt;fName&gt;Johnathan&lt;/fName&gt;
+                    &lt;lName&gt;Egbert&lt;/lName&gt;
+                    &lt;position&gt;Biologist&lt;/position&gt;
+                    &lt;hoursPerWeek&gt;38&lt;/hoursPerWeek&gt;
+                    &lt;salary&gt;$73,000&lt;/salary&gt;
+                &lt;/Employee&gt;
+                &lt;Employee ID='1025'&gt;
+                    &lt;fName&gt;Rei&lt;/fName&gt;
+                    &lt;lName&gt;Ayanami&lt;/lName&gt;
+                    &lt;position&gt;Spiritualist&lt;/position&gt;
+                    &lt;hoursPerWeek&gt;46&lt;/hoursPerWeek&gt;
+                    &lt;salary&gt;$57,000&lt;/salary&gt;
+                &lt;/Employee&gt;
+                &lt;Employee ID='1111'&gt;
+                    &lt;fName&gt;Peach&lt;/fName&gt;
+                    &lt;lName&gt;Sugars&lt;/lName&gt;
+                    &lt;position&gt;Maintinence&lt;/position&gt;
+                    &lt;hoursPerWeek&gt;28&lt;/hoursPerWeek&gt;
+                    &lt;salary&gt;$45,000&lt;/salary&gt;
+                &lt;/Employee&gt;
+            &lt;/EmployeeData&gt;
+            </code></pre>
+        </div>
+
+        <div class="tab-content" id="tab4">
+            <h2>What is JavaScript?</h2>
+            <p>Javascript is a high level text based programming language primarily used on the client side of web development that allows you to customize and control complex website content. It allows much more capabilites into how interactable your website can be with animations, changing content layout, and user interactions.</p>
+        </div>
+
+        <div class="tab-content" id="tab5">
+            <h2>How is JavaScript related to HTML and CSS?</h2>
+            <p>Javascript builds on the existing HTML and CSS structures and allows users to interact with the displayed media in ways they couldnt before simply using HTML or CSS. Javascript enhances the best parts of both languages and allows for a more memorable web experience which could help with drawing more people to your site.</p>
+        </div>
+
+        <div class="tab-content" id="tab6">
+            <h2>Common JavaScript Elements, Properties, Methods, and Functions (Example)</h2>
+            <p><strong>Elements:</strong> <code>var age = 23</code>, <code>console.log("Log Message");</code>, <code>alert("Alert Message")</code></p>
+            <p><strong>Properties:</strong> <code>var numberOfFruits = fruits.length</code>, <code>person.age</code>, <code>myObj.cars["car3"]</code></p>
+            <p><strong>Method:</strong> <code>Math.random()</code>, <code>array.push('Item')</code>, <code>string.toUpperCase()</code></p>
+            <p><strong>Function:</strong> <code>function(x, y){ return x + y; }</code>, <code>function Hello(name){ console.log("Greetings, " + name); }</code></p>
+        </div>
+
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tabs
+            var tabs = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+
+            // Show the selected tab
+            var selectedTab = document.getElementById(tabId);
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
