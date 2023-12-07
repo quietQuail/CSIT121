@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Forms Practice</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 20px;
+    }
+
+    h1{
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, textarea {
+      width: 100%;      
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    form {
+      max-width: 450px;
+      margin: auto;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    #textLimitMessage {
+      color: red;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    button {
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+
+
+  <h1>Feedback Forum</h1>
+  <form action="#" method="post">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="comments">Comments:</label>
+
+    <textarea id="comments" name="comments" rows="8" maxlength="1600" required oninput="checkTextLimit()"></textarea>
+
+    <span id="textLimitMessage"></span>
+
+    <button type="submit">Submit</button>
+
+  </form>
+
+  <footer>
+    <p>Tyler Melka - 2023</p>
+    <p>Email: <a href="me1096810@email.ccbcmd.edu">me1096810@email.ccbcmd.edu</a></p>
+  </footer>
+
+   <script>
+    function checkTextLimit() {
+      var textarea = document.getElementById('comments');
+      var textLimitMessage = document.getElementById('textLimitMessage');
+
+      if (textarea.value.length == 1600) {
+        textLimitMessage.textContent = 'Text limit reached!';
+      } else {
+        textLimitMessage.textContent = '';
+      }
+    }
+  </script>
+
+</body>
+</html>
