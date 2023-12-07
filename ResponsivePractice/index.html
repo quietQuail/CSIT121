@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: rebeccapurple;
+    }
+
+    #gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .gallery-item {
+      flex: 1 0 200px;
+      margin: 10px;
+      background-color: darkseagreen;
+      display: flex;
+      flex-direction: column; 
+      justify-content: center;
+      align-items: center;
+    }
+
+    .gallery-item IMG {
+      max-height: 300px;
+      padding: 10px;
+    }
+
+
+    header, footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+  <title>ResponsivePractice</title>
+</head>
+<body>
+  <header>
+    <h1>My Favoirte Pieces of Media</h1>
+  </header>
+
+  <div id="gallery">
+    <!-- Photo 1 -->
+    <div class="gallery-item">
+      <img src="steven.jpg">
+      <h2>Steven Universe</h2>
+    </div>
+
+    <!-- Photo 2 -->
+    <div class="gallery-item">
+      <img src="undertale.jpg">
+      <h2>Undertale</h2>
+    </div>
+
+    <!-- Photo 3 -->
+    <div class="gallery-item">
+      <img src="homestuck.jpg">
+      <h2>Homestuck</h2>
+    </div>
+
+    <!-- Photo 4 -->
+    <div class="gallery-item">
+      <img src="evangelion.jpg">
+      <h2>Neon Genesis Evangelion</h2>
+    </div>
+  </div>
+
+  <footer>
+    <p>Tyler Melka, 2023</p>
+  </footer>
+</body>
+</html>
