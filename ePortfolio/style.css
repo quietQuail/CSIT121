@@ -518,6 +518,11 @@ display: inline-block;
         width: 100%;
     }
 
+    .inner img, .topicBox img {
+        max-width: 100%; /* Ensure images are not wider than their containers */
+        height: auto; /* Maintain the aspect ratio of the images */
+    }
+
     .subcategories li, .topics li {
         width: 100%;
         margin-right: 0;
