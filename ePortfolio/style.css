@@ -528,7 +528,7 @@ display: inline-block;
         margin-right: 0;
     }
 
-    .topicInfo, .aboutMePics, .topicSlideshow, .mainSlideshow, .videoPlayer {
+    .topicInfo, .aboutMePics, .mainPageVerticalImg, .topicSlideshow, .mainSlideshow, .videoPlayer {
         width: 100%;
     }
 
