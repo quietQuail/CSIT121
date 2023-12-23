@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .header {
+    background: #FFF url(bgs/bg2.jpg) no-repeat center top;
+    }
+    h3{
+        color:cadetblue;
+        font-size: 24px;
+    }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Your Website</title>
+</head>
+<body>
+
+<div class="header">
+    <div class="headerNameBox">
+        <h1>Tyler Melkas ePortfolio</h1>
+    </div>
+</div>
+
+<div class="dual-container">
+    <div class="categories">
+        <h2>Categories</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="art.html">Art</a></li>
+            <li><a href="programming.html">Programming</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="recognition.html">Recognitions</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+    	<div class = "dual-container">
+    		<div class = "content">
+    			<div class="topicSlideshow">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <iframe src="https://scratch.mit.edu/projects/757211589/embed" allowtransparency="true" width="700" height="550" frameborder="0" scrolling="no" allowfullscreen></iframe>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="pics/pluckinApples.jpg" alt = "pic" style="width:100%">
+    <div class="text">Game Image</div>
+  </div>
+
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+</div>
+    		</div>
+    		<div class = "content">
+    		<div class = "topicInfo">
+    			<h3>Scatch Game - Pluckin Apples</h3>
+                <p>December 2022</p>
+    			<p>This is a game I created in scratch for an Online class I was taking. The premise is simple catch the falling apples with the basket, you move the basket by clicking anywhere on the screen. The basket can only go so far up however so you must time your catches so no apples hit the ground and rot.</p>
+                <p>You can play the game externally here</p>
+                <a href="https://scratch.mit.edu/projects/757211589">
+                    <p>Scratch Link
+                    </p>
+    		</div>
+    	</div>
+    </div>
+     </div>
+</div>
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>

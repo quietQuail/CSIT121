@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .header {
+    background: #FFF url(bgs/bg4.jpg) no-repeat center top;
+    }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Your Website</title>
+</head>
+<body>
+
+<div class="header">
+    <div class="headerNameBox">
+        <h1>Tyler Melkas ePortfolio</h1>
+    </div>
+</div>
+
+<div class="dual-container">
+    <div class="categories">
+        <h2>Categories</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="art.html">Art</a></li>
+            <li><a href="programming.html">Programming</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="recognition.html">Recognitions</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <ul class="tabs">
+            <li class="tab" onclick="showTab('tab1')">Recognitions</li>
+        </ul>
+
+        <div class="tab-content" id="tab1">
+            <div class = "outer">
+                <div class = "inner">
+                     <img src="pics/image1.jpg" alt="Topic 1 Image">
+                     <h3>pear</h3>
+                     <p>In middle school I was given an award for a still life oil pastel drawing of a pear I had made.</p>
+                </div>
+
+
+                <div class = "inner">
+                     <img src="pics/image1.jpg" alt="Topic 1 Image">
+                     <h3>art show</h3>
+                     <p>In 10th grade I was attending an art show at my school with one of my pieces being displayed, and I was interviewed and put up on our school systems website</p>
+                </div>
+
+
+                <div class = "inner">
+                     <img src="pics/image1.jpg" alt="Topic 1 Image">
+                     <h3>band</h3>
+                     <p>When I was in highschool I was 1st chair clarinet in band, one year during ensembles we were recognized in the local newspapaer, and my group got a very good score.</p>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showTab(tabId) {
+        // Hide all tabs
+        var tabs = document.getElementsByClassName('tab-content');
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].classList.remove('active');
+        }
+
+        // Show the selected tab
+        var selectedTab = document.getElementById(tabId);
+        if (selectedTab) {
+            selectedTab.classList.add('active');
+        }
+    }
+</script>
+
+</body>
+</html>

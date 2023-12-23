@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .header {
+    background: #FFF url(bgs/bg2.jpg) no-repeat center top;
+    }
+    h3{
+      color: deepskyblue;
+      font-size: 30px;
+    }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Your Website</title>
+</head>
+<body>
+
+<div class="header">
+    <div class="headerNameBox">
+        <h1>Tyler Melkas ePortfolio</h1>
+    </div>
+</div>
+
+<div class="dual-container">
+    <div class="categories">
+        <h2>Categories</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="art.html">Art</a></li>
+            <li><a href="programming.html">Programming</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="recognition.html">Recognitions</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+    	<div class = "dual-container">
+    		<div class = "content">
+    			<div class="horizontalTopicSlideshow">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <iframe class = "videoPlayer" src="https://www.youtube.com/embed/Gn7x-IYdEjE" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="pics/sk/1.jpg" alt = "pic" style="width:100%">
+    <div class="text">Title Image</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="pics/sk/2.jpg" alt = "pic" style="width:100%">
+    <div class="text">Menu Setup</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="pics/sk/3.jpg" alt = "pic" style="width:100%">
+    <div class="text">Defending</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="pics/sk/4.jpg" alt = "pic" style="width:100%">
+    <div class="text">Meeting the Forest Residents</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="pics/sk/5.jpg" alt = "pic" style="width:100%">
+    <div class="text">Engaging a skeleton on the bridge</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="pics/sk/6.jpg" alt = "pic" style="width:100%">
+    <div class="text">Conversing with a scarab</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="pics/sk/7.jpg" alt = "pic" style="width:100%">
+    <div class="text">A fallen warrior reborn</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="pics/sk/8.jpg" alt = "pic" style="width:100%">
+    <div class="text">Your Predecessor.</div>
+  </div>
+
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+</div>
+    		</div>
+    		<div class = "content">
+    		<div class = "topicInfo">
+    			<h3>The Starlight Knight</h3>
+    			<p>The Starlight Knight is a click to move, turn based rpg made completely within alice.</p>
+          <p>The premise follows that the kingdoms royal wizard Lithop has gone rouge, kidnapping the princess and taking her to his chambers within Devils Cavern. You play as the recently appointed royal knight, you've trained all your life to serve your kingdom and have status upon the royals. The news gets out about the princesses alleged kidnapping and you rush off without a thought of hesitation to save the princess and restore peace to the kingdom...But its exactly that pride that leads you down the path of despair.</p>
+          <p>I created this game duing my fall 2021 semester in college as my final for the class, the alice class served as a basic introduction to programming by utilizing a 3d space and puzzlepeice-like code. The game was fully inspired by the song "Nightmare Knight" by Toby Fox, when I listened to it I imagined the true ending to the game, and the badass fight that would take place, I used that as inspiration and fuel to expand and build the rest of the world</p>
+          <p>I doccumented the entire game within a youtube video for anyone to view and to have as an archive, the quality is higher if you watch it on youtube instead of the imbedded video.</p>
+    		</div>
+    	</div>
+    </div>
+     </div>
+</div>
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
