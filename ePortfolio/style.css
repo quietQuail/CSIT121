@@ -529,8 +529,15 @@ display: inline-block;
         margin-right: 0;
     }
 
-    .topicInfo, .aboutMePics, .mainPageVerticalImg, .topicSlideshow, .mainSlideshow, .videoPlayer {
+    .topicInfo, .aboutMePics, .topicSlideshow, .mainSlideshow, .videoPlayer {
         width: 100%;
+    }
+
+    .mainPageVerticalImg{
+        display: block; /* Make the image a block element */
+        margin: auto; /* Center the image horizontally */
+        height:300px;
+        width:auto;
     }
 
     h1, h2, h3, p {
