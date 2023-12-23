@@ -26,11 +26,12 @@ body {
 }
 
 .headerNameBox{
-    background-color: #333;
+    background-color: #4f5250;
     color: black;
-    padding: 20px 0;
-    margin-left: 60px;
-    margin-right: 60px;
+    border: 2px solid black;
+    padding: 18px 0;
+    margin-left: 55px;
+    margin-right: 55px;
     text-align: center;
 }
 
