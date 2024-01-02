@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="pics/pageIcon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .header {
+    background: #FFF url(bgs/bg2.jpg) no-repeat center top;
+    }
+    h3{
+        color: #30B53D;
+        font-size: 24px;
+    }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>The Quail's Nest</title>
+</head>
+<body>
+
+<div class="header">
+    <div class = "headerNameBox">
+        <h1>quietQuail's Creative Cove</h1>
+    </div>
+</div>
+
+<div class="dual-container">
+    <div class="categories">
+        <h2>Categories</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="art.html">Art</a></li>
+            <li><a href="programming.html">Programming</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="recognition.html">Recognitions</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+    	<div class = "dual-container">
+    		<div class = "content">
+    			<div class="topicSlideshow">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img class = "mainPageHorizontalImg" src="pics/introspection.jpg" alt = "Finished Piece" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="pics/introspection2.jpg" alt = "kaworu" style="width:100%">
+    <div class="text">Kaworu, the embodiment of the hope of the lilin.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img  src="pics/introspection3.jpg" alt = "asuka" style="width:100%">
+    <div class="text">Asuka, the girl who grew up too fast and ran out of time.</div>
+  </div>
+
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+    		</div>
+    		<div class = "content">
+    		<div class = "topicInfo">
+    			<h3>Instrospection.</h3>
+                <p>January 1st 2024</p>
+    			<p>The human mind is very fascinating, compare it to the ocean with how vast and deep it is yet how little we truly know what goes on at the depths. Sometimes you can fall into the deep end and get swept under by the waves, dwelling deep into yourself and your psyche from several different perspectives. It can feel like a war within your mind between what perspective to hold in your heart as your reality. One may give you hope while another may give you despair, this can cycle endlessly and feel like a bottomless pit.</p>
+                <p>Expanding upon hope and despair, represented in this peice is Kaworu Nagisa and Asuka Langely Soryu from Neon Genesis Evangelion. Both characters represent one of these complex human experiences in their own unique ways.</p>
+    		</div>
+    	</div>
+    </div>
+     </div>
+</div>
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
