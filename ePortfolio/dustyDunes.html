@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="pics/pageIcon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .header {
+    background: #FFF url(bgs/bg8.jpg) no-repeat center top;
+    }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>The Quail's Nest</title>
+</head>
+<body>
+
+<div class="header">
+    <div class = "headerNameBox">
+        <h1>quietQuail's Creative Cove</h1>
+    </div>
+</div>
+
+<div class="dual-container">
+    <div class="categories">
+        <h2>Categories</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="art.html">Art</a></li>
+            <li><a href="programming.html">Programming</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="recognition.html">Recognitions</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+    	<div class = "dual-container">
+    		<div class = "content">
+    			<div class="topicSlideshow">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="pics/dustyDunes.jpg" alt = "Title/Area 1" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="pics/dustyDunes2.jpg" alt = "Railway" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="pics/dustyDunes3.jpg" alt = "Area 2" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="pics/dustyDunes4.jpg" alt = "Area 3" style="width:100%">
+  </div>
+
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+
+</div>
+    		</div>
+    		<div class = "content">
+    		<div class = "topicInfo">
+    			<h2>Dusty Dunes Tycoon</h2>
+          <p>Started Development Nov 2023</p>
+    			<p>This is VR Mining Tycoon im currently developing within Unity. It started out as a project for one of my online classes but expanded as I found myself enjoying the process and adding more and more ideas. Im hoping to getsomewhere with this and have it on platforms such as steam and the oculus store.</p>
+          <p>The player is stationed within a minecart, and is able to unlock droppers that dispense unique types of gems. Using those gems the player can purchase speed or value upgraders for that dropper, as well as unlock new destinations to travel to via the minecart. There are planned to be plenty destinations to travese to, each prodiving the player a new dropper type or a fun side activity.</p>
+          <p>The side activitys are more hands on for the player, youre able to mine rocks which gives you gems and rock fragments in one of them and then test your skills with a shooting range within a valley.</p>
+    		</div>
+    	</div>
+    </div>
+     </div>
+</div>
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
