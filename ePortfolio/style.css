@@ -374,26 +374,35 @@ display: inline-block;
   to {opacity: 1}
 }
 
-.verticalTopicImg{
-    width: auto;
-    height:500px;
+
+.verticalTopicImg {
+    height: 400px; /* Set a fixed height for vertical images */
+    max-height: 100%; /* Prevent images from exceeding their container */
+    width: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Ensure proper alignment within the .inner box */
+    object-fit: contain; /* Ensures the image scales without cropping */
 }
 
-.horizontalTopicImg{
-    height:auto;
-    width:500px;
+.horizontalTopicImg {
+    height: 400px; /* Match the height of verticalTopicImg */
+    max-height: 100%; /* Prevent images from exceeding the container */
+    width: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Ensure proper alignment */
+    object-fit: contain; /* Ensures the image scales without cropping */
 }
 
-.bigVerticalTopicImg{
-    width: auto;
-    height:400px;
+
+.bigVerticalTopicImg,
+.bigHorizontalTopicImg {
+    max-width: 100%; /* Ensures image width stays within its container */
+    height: auto; /* Maintains aspect ratio */
+    margin: 0 auto; /* Centers the image horizontally */
+    display: block; /* Prevents spacing issues */
+    object-fit: contain; /* Keeps image proportionally scaled within the container */
 }
 
-.bigHorizontalTopicImg{
-
-    height:300px;
-    width:auto;
-}
 
 .mainPageVerticalImg {
     display: block; /* Make the image a block element */
@@ -505,6 +514,11 @@ display: inline-block;
     .categories, .content {
         width: 100%;
         margin-right: 0;
+    }
+
+    .verticalTopicImg,
+    .horizontalTopicImg {
+        height: 250px; /* Smaller fixed height for mobile */
     }
 
     .categories {
